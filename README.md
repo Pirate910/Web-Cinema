@@ -1,1 +1,1 @@
-https://github.com/Pirate910/Web-Cinema/pull/1
+https://pirate910.github.io/Web-Cinema/
