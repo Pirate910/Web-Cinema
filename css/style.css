@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+*::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-width: 100vh;
+  font-family: Roboto;
+  font-size: 16px;
+  color: #fff;
+  background-color: #222;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: #000;
+}
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 80px;
+}
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 15px;
+}
+.header__search {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.film__container {
+  padding: 70px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.film__item {
+  width: 240px;
+  margin: 10px;
+  position: relative;
+}
+.film__cover-inner {
+  position: relative;
+  height: 360px;
+}
+.film__image {
+  max-width: 100%;
+  height: 100%;
+}
+.film__image-curtain {
+  background-color: #000;
+  opacity: 0.1;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  height: 100%;
+}
+.film__image-curtain:hover {
+  cursor: pointer;
+  opacity: 0;
+}
+.film__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 0;
+}
+.film__info-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.film__info-category {
+  font-size: 14px;
+}
+.film__rate {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 50%;
+  color: #fff;
+  z-index: 2;
+}
+
+.film__rate--yellow {
+  background-color: #f3e309;
+  color: #000;
+}
+
+.film__rate--red {
+  background-color: #d82c2c;
+}
+
+.film__rate--blue {
+  background-color: #3b91b3;
+}
+
+.info-category__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 5px;
+  color: #ffd80e;
+}
+
+.modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #000;
+  max-width: 450px;
+}
+.modal__movie-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px 0;
+  margin-bottom: 10px;
+}
+.modal__image {
+  margin-bottom: 15px;
+}
+.modal__movie-backdrop {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+}
+.modal__name-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px 0;
+}
+.modal__movie-close {
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+.modal__movie-close:hover {
+  cursor: pointer;
+}
+
+.movie-link a {
+  color: #ffd80e;
+}
+
+.modal--show {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow-y: scroll;
+}
